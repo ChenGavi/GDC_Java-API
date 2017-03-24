@@ -1,0 +1,28 @@
+plugins {
+    id "com.github.hierynomus.license" version "0.13.1"
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'java-library-distribution'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+
+    // PDF
+    compile 'org.apache.pdfbox:pdfbox:2.0.5'
+
+    // RestTemplate
+    compile 'org.springframework:spring-web:4.3.5.RELEASE'
+
+    // JSON
+    compile 'com.fasterxml.jackson.core:jackson-core:2.7.9'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.7.9'
+
+
+    testCompile 'junit:junit:4.12'
+}
