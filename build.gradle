@@ -8,6 +8,10 @@ apply plugin: 'java-library-distribution'
 
 repositories {
     mavenCentral()
+    // blockchain.info
+    maven {
+        url = 'https://raw.githubusercontent.com/blockchain/api-v1-client-java/mvn-repo'
+    }
 }
 
 dependencies {
@@ -23,6 +27,9 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-core:2.7.9'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.7.9'
 
+    // Bitcoin
+    compile 'org.bitcoinj:bitcoinj-core:0.14.4'
+    compile 'info.blockchain:api:1.1.4'
 
     testCompile 'junit:junit:4.12'
 }
